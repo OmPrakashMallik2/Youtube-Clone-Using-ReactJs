@@ -7,7 +7,7 @@ import { RxAvatar } from "react-icons/rx";
 
 function Nav() {
   return (
-    <div className="bg-neutral-900 flex justify-between py-2 px-7 text-neutral-200">
+    <div className="bg-white flex justify-between py-2 px-7  fixed top-0 left-0 right-0 z-10">
       <div className="flex items-center">
         <AiOutlineMenu className="text-2xl font-semibold cursor-pointer" />
         <img
@@ -17,11 +17,11 @@ function Nav() {
         />
       </div>
 
-      <div className="flex items-center w-2/5 rounded-full bg-neutral-700 ">
+      <div className="flex items-center w-2/5 rounded-full bg-neutral-400 ">
         <input
           type="text"
           placeholder="Search"
-          className="w-full rounded-l-full px-4 py-2 font-semibold outline-none"
+          className=" bg-neutral-300 w-full rounded-l-full px-4 py-2 font-semibold outline-none"
         />
         <button>
           <IoIosSearch className="w-16 text-2xl font-semibold rounded-r-full" />
