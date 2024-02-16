@@ -1,9 +1,10 @@
 import React from 'react'
+import Nav from './components/Nav'
 
 function App() {
   return (
     <div>
-      <h1 className='text-9xl font-bold text-neutral-500'>Youtube Clone 🚀</h1>
+      <Nav />
     </div>
   )
 }
