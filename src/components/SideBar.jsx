@@ -9,6 +9,25 @@ import { BiSolidVideos } from "react-icons/bi";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { AiOutlineLike } from "react-icons/ai";
 import { MdOutlineWatchLater } from "react-icons/md";
+import { AiOutlineFire } from "react-icons/ai";
+import { AiOutlineShopping } from "react-icons/ai";
+import { IoMdMusicalNotes } from "react-icons/io";
+import { PiFilmSlateBold } from "react-icons/pi";
+import { CiStreamOn } from "react-icons/ci";
+import { SiYoutubegaming } from "react-icons/si";
+import { BiNews } from "react-icons/bi";
+import { BsTrophy } from "react-icons/bs";
+import { GoLightBulb } from "react-icons/go";
+import { MdOutlinePodcasts } from "react-icons/md";
+import { GiHanger } from "react-icons/gi";
+import { FaYoutube } from "react-icons/fa";
+import { SiYoutubestudio } from "react-icons/si";
+import { SiYoutubemusic } from "react-icons/si";
+import { TbBrandYoutubeKids } from "react-icons/tb";
+import { IoSettingsOutline } from "react-icons/io5";
+import { MdOutlineFlag } from "react-icons/md";
+import { IoMdHelpCircleOutline } from "react-icons/io";
+import { MdOutlineFeedback } from "react-icons/md";
 
 function SideBar() {
   const sideBar1 = [
@@ -52,18 +71,87 @@ function SideBar() {
       icon: <AiOutlineLike />,
     },
   ];
-  const sideBar3 = [
+  const explore = [
     {
-      title: "Home",
-      icon: <GoHomeFill />,
+      title: "Trending",
+      icon: <AiOutlineFire />,
     },
     {
-      title: "Shorts",
-      icon: <SiYoutubeshorts />,
+      title: "Shopping",
+      icon: <AiOutlineShopping />,
     },
     {
-      title: "Subscriptions",
-      icon: <MdOutlineSubscriptions />,
+      title: "Music",
+      icon: <IoMdMusicalNotes />,
+    },
+    {
+      title: "Movie",
+      icon: <PiFilmSlateBold />,
+    },
+    {
+      title: "Live",
+      icon: <CiStreamOn />,
+    },
+    {
+      title: "Gaming",
+      icon: <SiYoutubegaming />,
+    },
+    {
+      title: "News",
+      icon: <BiNews />,
+    },
+    {
+      title: "Sports",
+      icon: <BsTrophy />,
+    },
+    {
+      title: "Learning",
+      icon: <GoLightBulb />,
+    },
+    {
+      title: "Fasion & Beauty",
+      icon: <GiHanger />,
+    },
+    {
+      title: "Podcasts",
+      icon: <MdOutlinePodcasts />,
+    },
+  ];
+
+  const youtube = [
+    {
+      title: "YouTube Prem",
+      icon: <FaYoutube />,
+    },
+    {
+      title: "YouTube Studio",
+      icon: <SiYoutubestudio />,
+    },
+    {
+      title: "YouTube Music",
+      icon: <SiYoutubemusic />,
+    },
+    {
+      title: "YouTube Kids",
+      icon: <TbBrandYoutubeKids />,
+    },
+  ];
+  const youtube2 = [
+    {
+      title: "Settings",
+      icon: <IoSettingsOutline />,
+    },
+    {
+      title: "Report History",
+      icon: <MdOutlineFlag />,
+    },
+    {
+      title: "Help",
+      icon: <IoMdHelpCircleOutline />,
+    },
+    {
+      title: "Send feedback",
+      icon: <MdOutlineFeedback />,
     },
   ];
 
@@ -95,10 +183,10 @@ function SideBar() {
       </div>
       <div className="pb-2 border-b-2 border-b-neutral-500">
         <div className="flex items-center py-2 px-4 rounded-xl">
-          <h2 className="font-medium text-medium mr-2">You</h2>
+          <h2 className="font-medium text-medium mr-2">Explore</h2>
           <IoIosArrowForward className="text-xl font-medium" />
         </div>
-        {sideBar2.map((item, index) => {
+        {explore.map((item, index) => {
           return (
             <div key={index} className="flex items-center py-3 px-4 rounded-xl">
               <div className="text-2xl mr-6">{item.icon}</div>
@@ -109,10 +197,20 @@ function SideBar() {
       </div>
       <div className="pb-2 border-b-2 border-b-neutral-500">
         <div className="flex items-center py-2 px-4 rounded-xl">
-          <h2 className="font-medium text-medium mr-2">You</h2>
+          <h2 className="font-medium text-medium mr-2">More from YouTube</h2>
           <IoIosArrowForward className="text-xl font-medium" />
         </div>
-        {sideBar2.map((item, index) => {
+        {youtube.map((item, index) => {
+          return (
+            <div key={index} className="flex items-center py-3 px-4 rounded-xl">
+              <div className="text-red-600 text-2xl mr-6">{item.icon}</div>
+              <h2 className="font-medium text-base">{item.title}</h2>
+            </div>
+          );
+        })}
+      </div>
+      <div className="pb-2 border-b-2 border-b-neutral-500">
+        {youtube2.map((item, index) => {
           return (
             <div key={index} className="flex items-center py-3 px-4 rounded-xl">
               <div className="text-2xl mr-6">{item.icon}</div>
@@ -120,6 +218,17 @@ function SideBar() {
             </div>
           );
         })}
+      </div>
+      <div className="pb-2 border-b-2 border-b-neutral-50 pb-16">
+        <p className="text-xs p-3 font-semibold">
+          About Press Copyright <br /> Contact us Creators <br /> Advertise
+          Developers
+        </p>
+        <p className="text-xs p-3 font-semibold">
+          Terms Privacy Policy & Safety <br /> How YouTube works <br /> Test new
+          features
+        </p>
+        <p className="text-xs p-3 font-semibold">© 2024 Google LLC</p>
       </div>
     </div>
   );

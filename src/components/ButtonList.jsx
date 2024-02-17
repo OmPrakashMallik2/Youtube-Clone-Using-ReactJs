@@ -20,7 +20,7 @@ function ButtonList() {
     <div className="py-3 ">
       {buttonList.map((btn, index) => {
         return (
-          <button className="text-medium font-bold py-1 px-3 bg-neutral-200 rounded-lg mx-2">
+          <button className="text-medium font-semibold py-1 px-3 bg-neutral-200 rounded-lg mx-2">
             {btn}
           </button>
         );
